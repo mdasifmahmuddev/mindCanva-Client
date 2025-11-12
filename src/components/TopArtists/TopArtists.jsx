@@ -29,9 +29,14 @@ const TopArtists = () => {
     }));
   };
 
+  const backgroundStyle = {
+    background: `linear-gradient(135deg, rgba(251, 186, 55, 0.08), rgba(212, 81, 19, 0.08))`,
+    backgroundColor: '#f5f5f3'
+  };
+
   if (loading) {
     return (
-      <section className="py-20 px-4 bg-base-100">
+      <section className="py-20 px-4 bg-base-100 min-h-screen" style={backgroundStyle}>
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-center items-center min-h-[400px]">
             <div className="relative">
@@ -46,7 +51,7 @@ const TopArtists = () => {
 
   if (artists.length === 0) {
     return (
-      <section className="py-20 px-4 bg-base-100">
+      <section className="py-20 px-4 bg-base-100 min-h-screen" style={backgroundStyle}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center py-16">
             <FaPalette className="w-16 h-16 mx-auto text-base-content/30 mb-4" />
@@ -59,7 +64,7 @@ const TopArtists = () => {
   }
 
   return (
-    <section className="py-20 px-4 bg-base-100 relative overflow-hidden">
+    <section className="py-20 px-4 bg-base-100 relative overflow-hidden min-h-screen" style={backgroundStyle}>
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
