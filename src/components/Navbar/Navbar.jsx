@@ -45,7 +45,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-base-100 shadow-sm">
+        <nav className="sticky top-0 z-50 bg-gradient-to-r from-base-100 via-base-100 to-primary/5 shadow-sm backdrop-blur-sm">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link 
