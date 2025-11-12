@@ -45,7 +45,7 @@ const Login = () => {
           image: result.user.photoURL
         };
 
-        axios.post('http://localhost:3000/users', newUser)
+        axios.post('https://mind-canvas-server-dun.vercel.app/users', newUser)
           .then(response => {
             Swal.fire({
               icon: 'success',

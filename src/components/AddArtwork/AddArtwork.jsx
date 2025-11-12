@@ -29,7 +29,7 @@ const AddArtwork = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:3000/artworks', formData);
+      const response = await axios.post('https://mind-canvas-server-dun.vercel.app/artworks', formData);
       
       if (response.data.success) {
         toast.success("Artwork added successfully!");

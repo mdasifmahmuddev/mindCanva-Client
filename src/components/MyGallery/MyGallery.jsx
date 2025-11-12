@@ -20,7 +20,7 @@ const MyGallery = () => {
 
   const fetchMyArtworks = () => {
     setLoading(true);
-    axios.get(`http://localhost:3000/my-artworks`, {
+    axios.get(`https://mind-canvas-server-dun.vercel.app/my-artworks`, {
       params: { email: user.email }
     })
       .then(response => {
@@ -45,7 +45,7 @@ const MyGallery = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:3000/artworks/${id}`)
+        axios.delete(`https://mind-canvas-server-dun.vercel.app/artworks/${id}`)
           .then(response => {
             if (response.data.success) {
               toast.success("Artwork deleted successfully!");
@@ -74,7 +74,7 @@ const MyGallery = () => {
       visibility: e.target.visibility.value,
     };
 
-    axios.put(`http://localhost:3000/artworks/${editingArtwork._id}`, formData)
+    axios.put(`https://mind-canvas-server-dun.vercel.app/artworks/${editingArtwork._id}`, formData)
       .then(response => {
         if (response.data.success) {
           toast.success("Artwork updated successfully!");
@@ -328,7 +328,7 @@ const MyGallery = () => {
                         price: form.querySelector('[name="price"]').value || 'Not for sale',
                         visibility: form.querySelector('[name="visibility"]').value,
                       };
-                      axios.put(`http://localhost:3000/artworks/${editingArtwork._id}`, formData)
+                      axios.put(`https://mind-canvas-server-dun.vercel.app/artworks/${editingArtwork._id}`, formData)
                         .then(response => {
                           if (response.data.success) {
                             toast.success("Artwork updated successfully!");

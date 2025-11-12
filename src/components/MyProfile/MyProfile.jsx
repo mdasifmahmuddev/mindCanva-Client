@@ -38,7 +38,7 @@ const MyProfile = () => {
     try {
       await updateUserProfile(formData.displayName, formData.photoURL);
 
-      const response = await axios.put('http://localhost:3000/users/profile', {
+      const response = await axios.put('https://mind-canvas-server-dun.vercel.app/users/profile', {
         email: user.email,
         displayName: formData.displayName,
         photoURL: formData.photoURL

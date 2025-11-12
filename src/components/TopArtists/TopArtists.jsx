@@ -10,7 +10,7 @@ const TopArtists = () => {
   useEffect(() => {
     const fetchArtists = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/artists/top');
+        const response = await axios.get('https://mind-canvas-server-dun.vercel.app/artists/top');
         setArtists(response.data);
         setLoading(false);
       } catch (error) {

@@ -45,7 +45,7 @@ const Register = () => {
         image: photo
       };
 
-      const response = await axios.post('http://localhost:3000/users', newUser, {
+      const response = await axios.post('https://mind-canvas-server-dun.vercel.app/users', newUser, {
         headers: {
           'content-type': 'application/json'
         }
@@ -73,7 +73,7 @@ const Register = () => {
         image: result.user.photoURL
       };
 
-      await axios.post('http://localhost:3000/users', newUser, {
+      await axios.post('https://mind-canvas-server-dun.vercel.app/users', newUser, {
         headers: {
           'content-type': 'application/json'
         }

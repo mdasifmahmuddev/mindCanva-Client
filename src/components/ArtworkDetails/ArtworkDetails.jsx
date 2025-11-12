@@ -17,7 +17,7 @@ const ArtworkDetails = () => {
   const [isAddingFavorite, setIsAddingFavorite] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/artworks/${id}`)
+    axios.get(`https://mind-canvas-server-dun.vercel.app/artworks/${id}`)
       .then(response => {
         setArtwork(response.data);
         fetchArtistInfo(response.data.created_by);
@@ -34,7 +34,7 @@ const ArtworkDetails = () => {
   }, [id, user]);
 
   const fetchArtistInfo = (email) => {
-    axios.get(`http://localhost:3000/artworks/artist/${email}`)
+    axios.get(`https://mind-canvas-server-dun.vercel.app/artworks/artist/${email}`)
       .then(response => {
         setArtistInfo({
           photo: response.data.artist_photo || '',
@@ -47,7 +47,7 @@ const ArtworkDetails = () => {
   const checkIfLiked = (artworkId) => {
     if (!user?.email) return;
     
-    axios.get(`http://localhost:3000/likes/check`, {
+    axios.get(`https://mind-canvas-server-dun.vercel.app/likes/check`, {
       params: {
         artwork_id: artworkId,
         user_email: user.email
@@ -62,7 +62,7 @@ const ArtworkDetails = () => {
   const checkIfFavorited = (artworkId) => {
     if (!user?.email) return;
     
-    axios.get(`http://localhost:3000/favorites/check`, {
+    axios.get(`https://mind-canvas-server-dun.vercel.app/favorites/check`, {
       params: {
         artwork_id: artworkId,
         user_email: user.email
@@ -100,7 +100,7 @@ const ArtworkDetails = () => {
     
     setIsLiking(true);
 
-    axios.patch(`http://localhost:3000/artworks/${id}/like`, {
+    axios.patch(`https://mind-canvas-server-dun.vercel.app/artworks/${id}/like`, {
       user_email: user.email
     })
       .then(response => {
@@ -166,7 +166,7 @@ const ArtworkDetails = () => {
       user_email: user.email
     };
 
-    axios.post('http://localhost:3000/favorites', favoriteData)
+    axios.post('https://mind-canvas-server-dun.vercel.app/favorites', favoriteData)
       .then(response => {
         if (response.data.success) {
           setIsFavorited(true);

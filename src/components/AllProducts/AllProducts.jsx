@@ -19,7 +19,7 @@ const AllProducts = () => {
   }, []);
 
   const fetchCategories = () => {
-    axios.get('http://localhost:3000/categories')
+    axios.get('https://mind-canvas-server-dun.vercel.app/categories')
       .then(response => {
         const cats = response.data || [];
         setCategories(['All', ...cats]);
@@ -33,7 +33,7 @@ const AllProducts = () => {
   };
 
   const fetchAllArtworks = () => {
-    axios.get('http://localhost:3000/artworks')
+    axios.get('https://mind-canvas-server-dun.vercel.app/artworks')
       .then(response => {
         setArtworks(response.data);
         setFilteredArtworks(response.data);
@@ -52,7 +52,7 @@ const AllProducts = () => {
       return;
     }
 
-    axios.get(`http://localhost:3000/search?search=${searchText}`)
+    axios.get(`https://mind-canvas-server-dun.vercel.app/search?search=${searchText}`)
       .then(response => {
         if (selectedCategory === 'All') {
           setFilteredArtworks(response.data);
@@ -76,7 +76,7 @@ const AllProducts = () => {
     }
 
     if (searchText.trim() === '') {
-      axios.get(`http://localhost:3000/artworks/category/${category}`)
+      axios.get(`https://mind-canvas-server-dun.vercel.app/artworks/category/${category}`)
         .then(response => {
           setFilteredArtworks(response.data);
         })
@@ -86,7 +86,7 @@ const AllProducts = () => {
           setFilteredArtworks(filtered);
         });
     } else {
-      axios.get(`http://localhost:3000/search?search=${searchText}`)
+      axios.get(`https://mind-canvas-server-dun.vercel.app/search?search=${searchText}`)
         .then(response => {
           const filtered = response.data.filter(artwork => artwork.category === category);
           setFilteredArtworks(filtered);

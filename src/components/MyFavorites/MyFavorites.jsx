@@ -12,7 +12,7 @@ const MyFavorites = () => {
 
   useEffect(() => {
     if (user?.email) {
-      axios.get(`http://localhost:3000/favorites`, {
+      axios.get(`https://mind-canvas-server-dun.vercel.app/favorites`, {
         params: { email: user.email }
       })
         .then(response => {
@@ -40,7 +40,7 @@ const MyFavorites = () => {
       color: document.documentElement.getAttribute('data-theme') === 'dark' ? '#f3f4f6' : '#1f2937',
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:3000/favorites/${id}`)
+        axios.delete(`https://mind-canvas-server-dun.vercel.app/favorites/${id}`)
           .then(response => {
             if (response.data.success) {
               setFavorites(favorites.filter(fav => fav._id !== id));

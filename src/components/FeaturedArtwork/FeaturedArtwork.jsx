@@ -14,7 +14,7 @@ const FeaturedArtworks = () => {
   }, []);
 
   const fetchFeaturedArtworks = () => {
-    axios.get('http://localhost:3000/artworks/latest')
+    axios.get('https://mind-canvas-server-dun.vercel.app/artworks/latest')
       .then(response => {
         setFeaturedArtworks(response.data);
         setLoading(false);
