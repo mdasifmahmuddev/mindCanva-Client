@@ -118,7 +118,7 @@ const CommunityHighlights = () => {
   };
 
   return (
-    <section className="relative py-16 px-4 min-h-screen flex flex-col items-center justify-center overflow-hidden bg-base-100">
+    <section className="relative py-20 px-4 min-h-screen flex flex-col items-center justify-center overflow-hidden bg-base-100">
       {artPatterns.map((pattern, idx) => (
         <div
           key={idx}
@@ -137,7 +137,7 @@ const CommunityHighlights = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-base-100/85 via-base-100/70 to-base-100/85" />
 
       <div 
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-30 pointer-events-none"
         style={{
           backgroundImage: `
             repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(255,255,255,.05) 50px, rgba(255,255,255,.05) 100px),
@@ -186,15 +186,11 @@ const CommunityHighlights = () => {
       `}</style>
 
       <div className="text-center mb-16 z-20 relative">
-        <h2 className="text-5xl md:text-7xl font-black mb-4 relative inline-block">
-          <span className="absolute inset-0 blur-2xl bg-gradient-to-r from-primary via-secondary to-accent opacity-50" />
-          <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
-            Community Highlights
-          </span>
-        </h2>
-        <p className="text-base-content/70 text-lg max-w-2xl mx-auto mt-6 font-light">
-          Win amazing art supplies and showcase your talent to the world
-        </p>
+         <h1 className="text-5xl md:text-6xl font-black text-base-content mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Prize showcase
+          </h1> 
+        <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
+         
       </div>
 
       <div className="relative w-full max-w-7xl h-[550px] flex items-center justify-center mb-8 z-10" style={{ perspective: "1200px" }}>

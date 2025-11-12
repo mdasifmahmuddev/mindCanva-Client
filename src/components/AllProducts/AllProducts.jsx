@@ -111,8 +111,9 @@ const AllProducts = () => {
       <div className="all-products-content">
         <div className="container mx-auto px-4 py-12">
           <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-base-content mb-4 tracking-tight">Explore Artworks</h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
+<h1 className="text-5xl md:text-6xl font-black text-base-content mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+         Explore Artwork 
+          </h1>            <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
           </div>
           
           <div className="max-w-3xl mx-auto mb-12">
