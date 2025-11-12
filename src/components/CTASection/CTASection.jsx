@@ -9,6 +9,11 @@ const CTASection = () => {
     setIsVisible(true);
   }, []);
 
+  const backgroundStyle = {
+    background: `linear-gradient(135deg, rgba(251, 186, 55, 0.08), rgba(212, 81, 19, 0.08))`,
+    backgroundColor: '#f5f5f3'
+  };
+
   const artworks = [
     {
       image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=800&fit=crop',
@@ -43,36 +48,42 @@ const CTASection = () => {
   ];
 
   return (
-    <section className="relative py-12 md:py-16 px-4 overflow-hidden bg-base-100">
+    <section className="relative py-20 px-4 overflow-hidden bg-base-100" style={backgroundStyle}>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
-          className="absolute top-20 left-20 w-96 h-96 bg-primary/8 rounded-full blur-3xl" 
+          className="absolute w-96 h-96 bg-primary opacity-10 rounded-full blur-3xl top-0 -left-20"
           style={{ 
-            opacity: isVisible ? 1 : 0,
-            transition: 'opacity 2s ease-out'
+            opacity: isVisible ? 0.1 : 0,
+            transition: 'opacity 2s ease-out',
+            animation: 'float 8s ease-in-out infinite'
           }} 
         />
         <div 
-          className="absolute bottom-20 right-20 w-96 h-96 bg-accent/8 rounded-full blur-3xl" 
+          className="absolute w-80 h-80 bg-accent opacity-10 rounded-full blur-3xl bottom-0 -right-20"
           style={{ 
-            opacity: isVisible ? 1 : 0,
-            transition: 'opacity 2s ease-out 0.5s'
+            opacity: isVisible ? 0.1 : 0,
+            transition: 'opacity 2s ease-out 0.5s',
+            animation: 'float 10s ease-in-out infinite reverse'
           }} 
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative max-w-7xl mx-auto z-10">
         <div 
-          className="text-center mb-12"
+          className="text-center mb-16"
           style={{ 
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
             transition: 'all 1s ease-out'
           }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-base-content">
-            Featured Artworks
-          </h2>
+          <h1 className="text-5xl md:text-6xl font-black text-base-content mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Handpick Masterpiece
+          </h1> 
+          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
+           
         </div>
 
         <div className="relative">
@@ -114,6 +125,7 @@ const CTASection = () => {
             ))}
           </div>
         </div>
+ 
       </div>
 
       <style>{`
