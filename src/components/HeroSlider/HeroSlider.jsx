@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Sparkles, ArrowRight } from 'lucide-react';
 import './HeroSlider.css';
+import { Link } from 'react-router';
 
 const HeroSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,12 +32,7 @@ const HeroSlider = () => {
       subtitle: 'Designs',
       description: 'Cutting-edge design and innovation'
     },
-    {
-      original: 'https://images.unsplash.com/photo-1578562271691-d8a38f60c3b0?w=1920&h=1080&fit=crop',
-      title: 'Visual',
-      subtitle: 'Stories',
-      description: 'Powerful visuals that inspire and captivate'
-    }
+     
   ];
 
   const goToSlide = (index) => {
@@ -95,7 +91,13 @@ const HeroSlider = () => {
                 </p>
 
                 <button className="hero-btn">
-                  <span className="hero-btn-text">Explore Now</span>
+                  <span className="hero-btn-text">
+
+                    <Link to='./explore'>Explore Now</Link>
+
+
+
+                  </span>
                   <ArrowRight className="hero-btn-icon" />
                 </button>
               </div>
