@@ -69,16 +69,15 @@ const TopArtists = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
-            <FaAward className="text-primary text-xl" />
-            <span className="text-primary font-semibold text-sm">Featured Artists</span>
-          </div>
-          <h2 className="text-5xl font-bold text-base-content mb-4">
-            Top Artists of the Week
-          </h2>
-          <p className="text-base-content/60 text-lg max-w-2xl mx-auto">
-            Celebrating the most loved artists based on community appreciation
-          </p>
+
+           <h1 className="text-5xl md:text-6xl font-black text-base-content mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+             Top Artists of the Week
+          </h1> 
+
+
+         
+          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
+           
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -112,9 +111,8 @@ const TopArtists = () => {
                       <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                         <FaPalette className="text-white text-xl" />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-white mb-1 line-clamp-1">{artist.artist_name}</h3>
-                        <p className="text-white/80 text-sm">Featured Artist</p>
+                      <div>
+                        <h3 className="text-lg font-bold text-white">{artist.artist_name}</h3>
                       </div>
                     </div>
                     
@@ -189,6 +187,8 @@ const TopArtists = () => {
             </div>
           ))}
         </div>
+
+         
       </div>
     </section>
   );
