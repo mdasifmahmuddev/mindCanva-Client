@@ -75,18 +75,13 @@ const MyFavorites = () => {
     <div className="min-h-screen bg-gradient-to-br from-base-100 via-base-200 to-base-100 py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <div className="inline-block mb-4">
-            <div className="badge badge-primary badge-lg gap-2 font-semibold">
-              <Heart className="w-4 h-4 fill-current" />
-              Your Collection
-            </div>
-          </div>
+          
           <h1 className="text-5xl md:text-6xl font-black text-base-content mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             My Favorites
           </h1>
-          <p className="text-base-content/70 text-lg max-w-2xl mx-auto">
-            Your curated collection of inspiring artworks
-          </p>
+                    <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
+
+           
         </div>
 
         {favorites.length === 0 ? (

@@ -111,9 +111,9 @@ const MyGallery = () => {
 
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-base-content mb-4 tracking-tight">
+           <h1 className="text-5xl md:text-6xl font-black text-base-content mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             My Gallery
-          </h2>
+          </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
         </div>
 
