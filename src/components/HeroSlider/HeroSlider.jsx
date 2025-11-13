@@ -9,30 +9,29 @@ const HeroSlider = () => {
 
   const sliderImages = [
     {
-      original: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1920&h=1080&fit=crop',
+      original: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=1920&h=1080&fit=crop',
       title: 'Contemporary',
       subtitle: 'Masterpieces',
       description: 'Explore the finest contemporary art pieces'
     },
     {
-      original: 'https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=1920&h=1080&fit=crop',
-      title: 'Digital Art',
-      subtitle: 'Revolution',
-      description: 'Discover the future of digital creativity'
+      original: 'https://images.unsplash.com/photo-1615184697985-c9bde1b07da7?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      title: 'Abstract',
+      subtitle: 'Creations',
+      description: 'Discover unique abstract artworks'
     },
     {
-      original: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1920&h=1080&fit=crop',
+      original: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1920&h=1080&fit=crop',
       title: 'Creative',
       subtitle: 'Artists',
       description: 'Meet talented creators from around the world'
     },
     {
-      original: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1920&h=1080&fit=crop',
-      title: 'Modern',
-      subtitle: 'Designs',
-      description: 'Cutting-edge design and innovation'
+      original: 'https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1920&h=1080&fit=crop',
+      title: 'Vibrant',
+      subtitle: 'Collections',
+      description: 'Experience colorful and dynamic art'
     },
-     
   ];
 
   const goToSlide = (index) => {
@@ -90,16 +89,12 @@ const HeroSlider = () => {
                   {image.description}
                 </p>
 
-                <button className="hero-btn">
+                <Link to='/explore' className="hero-btn">
                   <span className="hero-btn-text">
-
-                    <Link to='./explore'>Explore Now</Link>
-
-
-
+                    Explore Now
                   </span>
                   <ArrowRight className="hero-btn-icon" />
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -121,8 +116,6 @@ const HeroSlider = () => {
       >
         <ChevronRight size={32} />
       </button>
-
-       
     </section>
   );
 };
