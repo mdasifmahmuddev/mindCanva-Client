@@ -9,22 +9,24 @@ const MyFavorites = () => {
   const { user } = useContext(AuthContext);
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (user?.email) {
-      axios.get(`https://mind-canvas-server-dun.vercel.app/favorites`, {
-        params: { email: user.email }
+useEffect(() => {
+  if (user?.email) {
+    axios.get(`https://mind-canvas-server-dun.vercel.app/favorites`, {
+      params: { email: user.email }
+    })
+      .then(response => {
+        setFavorites(response.data.favorites || []);  
+        setLoading(false);
       })
-        .then(response => {
-          setFavorites(response.data);
-          setLoading(false);
-        })
-        .catch(error => {
-          console.error(error);
-          setLoading(false);
-        });
-    }
-  }, [user]);
+      .catch(error => {
+        console.error(error);
+        setFavorites([]); // 
+        setLoading(false);
+      });
+  }
+}, [user]);
+
+
 
   const handleUnfavorite = (id) => {
     Swal.fire({
