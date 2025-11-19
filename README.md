@@ -1,5 +1,16 @@
 # mindCanva - Share Your Art with the World 🎨
 
+## Home Page Preview
+
+![mindCanva Website](https://i.ibb.co.com/5xMdzkJw/mind-Canva.png)
+
+ 
+
+
+
+
+
+
 **Live Site:** [mindCanva Live](https://mind-canva.web.app/)
 
 Hey there! Welcome to mindCanva - a place where artists like you can share their creative work, discover amazing art from others, and build your own personal gallery.
