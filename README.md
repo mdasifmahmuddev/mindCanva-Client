@@ -2,12 +2,7 @@
 
 ## Home Page Preview
  
-[![mind-Canva](https://i.ibb.co/Q7jk6BZt/mind-Canva.png)](https://ibb.co/gbFdD1Gh)
-
- 
-
-
-
+![mind-Canva-Image](https://i.ibb.co/1YF3SJyg/mind-Canva-Image.webp)
 
 
 
