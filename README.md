@@ -1,8 +1,8 @@
 # mindCanva - Share Your Art with the World 🎨
 
 ## Home Page Preview
-
-![mindCanva Website](https://i.ibb.co/5xMdzkJw/mind-Canva.png)
+ 
+[![mind-Canva](https://i.ibb.co/Q7jk6BZt/mind-Canva.png)](https://ibb.co/gbFdD1Gh)
 
  
 
