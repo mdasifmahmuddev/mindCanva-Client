@@ -2,7 +2,7 @@
 
 ## Home Page Preview
 
-![mindCanva Website](https://i.ibb.co.com/5xMdzkJw/mind-Canva.png)
+![mindCanva Website](https://i.ibb.co/5xMdzkJw/mind-Canva.png)
 
  
 
